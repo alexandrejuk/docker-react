@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  web:
+    build:
+      # context: ./smart-shop para o compose fora da pasta
+      context: .      
+    environment:
+      - ENV=production
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      # - ./smart-shop:/app para o compose fora da pasta
